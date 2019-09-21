@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>8e4fd74a-d4fe-41fb-940b-5d26215acdcd</ProjectGuid>
+    <ProjectGuid>b28c4881-d1c1-4bd3-8a5b-5d6d7f7753f3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>process_video.py</StartupFile>
+    <StartupFile>train.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>process_video</Name>
-    <RootNamespace>process_video</RootNamespace>
+    <Name>FeatureExtract</Name>
+    <RootNamespace>FeatureExtract</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,13 +21,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CutPicture.py">
+    <Compile Include="FeatureExtract.py" />
+    <Compile Include="train.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DigitalRecognition.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="process_video.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

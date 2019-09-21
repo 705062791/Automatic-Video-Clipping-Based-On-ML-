@@ -16,6 +16,9 @@ def ProcessVideo(video_file,save_file):
         write = cv2.VideoWriter(save_file,cv2.VideoWriter_fourcc('m', 'p', '4', 'v'),fps,(int(width),int(heigh)))
 
         for i in range(int(frame_num)):
+            if i%200 == 0:
+                print('process {}th frame over'.format(i))
+
             flag,frame = video.read()
 
             cv2.putText(frame,str(i),(20,40),cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255),2)
@@ -35,7 +38,7 @@ def ProcessVideo(video_file,save_file):
 
 if __name__ == '__main__':
 
-    for root,dir,files in os.walk('D:/无人机拍摄/mp4/'):
+    for root,dir,files in os.walk('D:/data/无人机拍摄/mp4/'):
         if root and dir and files:
             print(dir)
             print(files)
